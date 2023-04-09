@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-AU" ng-app="va">
+<head>
+    <meta charset="utf-8">
+    <title>Veromo Adminimiser</title>
+    <meta name="description" content="">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <base href="/">
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <!-- ICON FONT -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.css"  rel="stylesheet">
+
+    <!-- FAVICON -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/icons/veromo_favicon_57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/icons/veromo_favicon_60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/icons/veromo_favicon_72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/icons/veromo_favicon_76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/icons/veromo_favicon_114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/icons/veromo_favicon_120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/icons/veromo_favicon_144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/icons/veromo_favicon_152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/icons/veromo_favicon_180x180.png">
+    <link rel="icon" type="image/png" href="/assets/images/icons/veromo_favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/assets/images/icons/veromo_favicon_194x194.png" sizes="194x194">
+    <link rel="icon" type="image/png" href="/assets/images/icons/veromo_favicon_96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/assets/images/icons/veromo_favicon_16x16.png" sizes="16x16">
+    <!-- <link rel="manifest" href="/manifest.json"> -->
+    <!-- <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"> -->
+    <!-- <meta name="apple-mobile-web-app-title" content="Adminimiser"> -->
+    <!-- <meta name="application-name" content="Adminimiser"> -->
+    <!-- <meta name="msapplication-TileColor" content="#da532c"> -->
+    <!-- <meta name="msapplication-TileImage" content="/mstile-144x144.png">-->
+    <!-- <meta name="theme-color" content="#ffffff"> -->
+
+    <!-- HTTPS DETECTION -->
+    <script>
+        if (window.location.protocol !== 'https:' && window.location.hostname !== 'local.app.veromo.com.au')
+        {
+            window.location.href = 'https:' + window.location.href.substring(window.location.protocol.length);
+        }
+    </script>
+
+    <!-- INITIAL DATA -->
+    <script>
+        var envPref;
+        var analyticsId;
+        var analyticsCookieDomain;
+
+        switch (window.location.hostname) {
+            case "localhost":
+            case "local.app.veromo.com.au":
+            case "local.veromo.com.au":
+                envPref = 'local.';
+                analyticsId = ''; // NOTE: change as needed
+                analyticsCookieDomain = 'none';
+                break;
+            case "dev.app.veromo.com.au":
+            case "dev.veromo.com.au":
+                envPref = 'dev.';
+                analyticsId = 'UA-80489704-1'; // NOTE: change as needed
+                analyticsCookieDomain = window.location.hostname;
+                break;
+            case "staging.app.veromo.com.au":
+            case "staging.veromo.com.au":
+                envPref = 'staging.';
+                analyticsId = 'UA-80489704-1'; // NOTE: change as needed
+                analyticsCookieDomain = window.location.hostname;
+                break;
+            default:
+                envPref = '';
+                analyticsId = 'UA-64870724-1';
+                analyticsCookieDomain = window.location.hostname;
+        }
+        document.write('<script src="https://' + envPref + 'api.veromo.com.au/services/initial.js"><\/script>');
+    </script>
+
+    <!--<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', analyticsId, { 'cookieDomain': analyticsCookieDomain });
+    </script>-->
+
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5WTRFS');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- JQUERY + ANGULAR + ANGULAR MODULES -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-resource.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-sanitize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-cookies.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-dialog/0.6.0/js/ngDialog.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-mask/1.8.4/mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.13.1/lodash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-signals/1.0.0/js-signals.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-poller/0.4.5/angular-poller.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angulartics/1.1.2/angulartics.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/messageformat/0.2.2/messageformat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.11.0/angular-translate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.11.0/angular-translate-interpolation-messageformat/angular-translate-interpolation-messageformat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.11.0/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.0.9/angular-material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.1/angular-material-icons.min.js"></script>
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- endinject -->
+    <!-- inject:partials -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <!-- ASIC SCRIPTS  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBopZcDrvQ-cZ5YkLm-BI3FDVn3ZoUeNb8&libraries=places"></script>
+
+    <!-- STRIPE -->
+    <script src="https://js.stripe.com/v2/"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/12.2.13/ng-file-upload.min.js"></script>
+
+</head>
+<body class="layout-app ng-cloak" ng-controller="LayoutController as layout" ng-class="layout.getStateClasses()">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WTRFS"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- HEADER -->
+    <div class="View-Header" va-the-header class="ng-cloak"></div>
+
+    <!-- NAVBAR -->
+    <div class="view-navbar" va-navbar class="ng-cloak"></div>
+
+    <!-- MAIN VIEW -->
+    <div class="view-main main ng-cloak" id="js-main" layout="row" flex>
+        <md-content flex ui-view class="ng-cloak main-content"></md-content>
+
+        <md-sidenav class="slide-right-panel md-sidenav-right md-whiteframe-4dp" md-component-id="slide-right-panel">
+                <md-toolbar class="md-theme-light">
+                    <h1 class="md-toolbar-tools"></h1>
+                </md-toolbar>
+                <md-content ng-controller="SlideRightPanelController as vm">
+                    <!--<p layout-padding><a>Account settings</a></p>-->
+                    <!--<p layout-padding><a ui-sref="invoices" ng-click="vm.toggleBusinessSubnavState()">Invoices</a></p>-->
+                    <md-list flex class="md-dense">
+                        <md-subheader class="md-no-sticky">
+                            <p>My Businesses</p>
+                            <input type="text" class="form-text" placeholder="Search for" ng-model="vm.businessSearch">
+                        </md-subheader>
+                        <md-divider ></md-divider>
+                        <md-list-item ng-if="vm.activeAccounts.length > 0" class="md-2-line header-active-biz-nav"
+                                      ng-class="acc.id === vm.currentAccount.id ? 'header-active-biz-nav__selected' : ''"
+                                      ng-repeat="acc in vm.activeAccounts | filter:{name : vm.businessSearch}" ng-click="vm.switchingAccount(acc.id)" >
+                            <div class="header-active-biz-nav__link__icon"
+                                 ng-class="acc.id === vm.currentAccount.id ? 'single-letter-icon-business':'single-letter-icon-business--active'">
+                                <img ng-src="{{vm.getFirstLetterIconImagePath(acc.name,'white')}}" class="single-letter-icon-business-img">
+                            </div>
+                            <div layout="column" class="md-list-item-text">
+                                <h4 class="header-nav__item__link__label">{{acc.name}}</h4>
+                                <h4 class="header-nav__item__link__label__secondary" ng-if="acc.id === vm.currentAccount.id">Selected</h4>
+                            </div>
+                            <md-divider ></md-divider>
+                        </md-list-item>
+                        <md-subheader class="md-no-sticky">Incomplete Orders</md-subheader>
+                        <md-divider ></md-divider>
+                        <md-list-item ng-if="vm.pendingAccounts.length > 0" class="md-2-line"
+                                      ng-class="acc.id === vm.currentAccount.id ? 'header-active-biz-nav__selected' : ''"
+                                      ng-repeat="acc in vm.pendingAccounts | filter:{name: vm.businessSearch}"
+                                      ng-click="vm.switchingAccount(acc.id)">
+                            <md-divider ></md-divider>
+                            <div class="single-letter-icon-business--inProgress header-active-biz-nav__link__icon">
+                                <img ng-src="{{vm.getFirstLetterIconImagePath(acc.name,'white')}}" class="single-letter-icon-business-img">
+                            </div>
+                            <div class="md-list-item-text" layout="row" layout-align="start center">
+                                <div layout="column">
+                                    <h4 layout="row" layout-align="start center">
+                                        <a class="header-nav__item__link__label header-pending-biz__nav__item__link">
+                                            {{acc.name}}
+                                        </a>
+                                    </h4>
+                                    <h4 class="header-nav__item__link__label__secondary">Incomplete</h4>
+                                </div>
+                                <span flex ng-click="vm.switchingAccount(acc.id)">&nbsp;</span>
+                                <div ng-if="acc.id !== vm.currentAccount.id"
+                                     ng-click="vm.deleteAccount($event, acc); vm.toggleBusinessSubnavState()">
+                                    <a class="header-pending-biz__nav__item__icon icon-times-circle"></a>
+                                </div>
+                            </div>
+                        </md-list-item>
+                        <div></div>
+                    </md-list>
+
+                    <div layout-padding>
+                        <button ng-click="vm.startNewBusiness()"
+                                class="button button--on-white button--stretch button--primary">
+                            Start a new business
+                        </button>
+                    </div>
+                </md-content>
+            </md-sidenav>
+    </div>
+
+    <!-- DIRECTIVES & PLUGINS -->
+    <div toast class="ng-cloak"></div>
+    <div va-loading-overlay class="ng-cloak"></div>
+
+    <!--<script>/*<![CDATA[*/-->
+    <!--window.setTimeout(function() {window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(c){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var o=this.createElement("script");n&&(this.domain=n),o.id="js-iframe-async",o.src=e,this.t=+new Date,this.zendeskHost=t,this.zEQueue=a,this.body.appendChild(o)},o.write('<' + 'body onload="document._l();">'),o.close()}("https://assets.zendesk.com/embeddable_framework/main.js","veromo.zendesk.com");}, 2000);-->
+    <!--/*]]>*/</script>-->
+
+</body>
+</html>
