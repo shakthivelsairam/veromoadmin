@@ -1,0 +1,54 @@
+{
+  "name": "va",
+  "description": "",
+  "main": "",
+  "authors": [],
+  "license": "MIT",
+  "homepage": "https://github.com/Veromo/adminimiser",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "resolutions": {
+    "angular-toastr": "^1.7.0",
+    "jquery": "^2.2.3",
+    "messageformat": "^0.2.2",
+    "angular": ">=1.2.15 <1.6"
+  },
+  "devDependencies": {
+    "jquery": "^2.2.3",
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-cookies": "^1.5.5",
+    "angular-touch": "^1.5.5",
+    "angular-sanitize": "^1.5.5",
+    "angular-messages": "^1.5.5",
+    "angular-aria": "^1.5.5",
+    "angular-resource": "^1.5.5",
+    "angular-ui-router": "^0.2.18",
+    "angular-mocks": "^1.5.5",
+    "angular-toastr": "^1.7.0",
+    "ng-dialog": "^0.6.0",
+    "ngToast": "ngtoast#^2.0.0",
+    "angular-ui-validate": "^1.2.2"
+  },
+  "dependencies": {
+    "angular-credit-cards": "^3.1.3",
+    "lodash": "^4.13.1",
+    "js-signals": "signals#^1.0.0",
+    "angular-scroll": "^1.0.0",
+    "angulartics-google-analytics": "^0.2.0",
+    "messageformat": "^0.2.2",
+    "angular-translate": "^2.11.0",
+    "angular-translate-interpolation-messageformat": "^2.11.0",
+    "angular-translate-loader-static-files": "^2.11.0",
+    "angular-material": "^1.0.9",
+    "angular-material-icons": "^0.7.1",
+    "angular-stripe-checkout": "^5.1.0",
+    "ng-file-upload": "^12.2.13"
+  }
+}

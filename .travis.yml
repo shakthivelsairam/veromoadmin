@@ -1,0 +1,51 @@
+language: node_js
+node:js:
+  - "6.2.2"
+install:
+  - npm install -g gulp-cli@^2.0.1 bower@^1.8.2
+  - npm install
+  - bower install
+script:
+  - gulp build
+branches:
+  only:
+  - master
+  - staging
+  - test
+cache:
+  directories:
+    - "node_modules"
+    - "bower_components"
+deploy:
+  - provider: s3
+    access_key_id: AKIAJXFFXQ3YI7TH3FGQ
+    secret_access_key: 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
+    bucket: au.com.veromo.app
+    region: ap-southeast-2
+    skip_cleanup: true
+    local_dir: dist
+    on:
+      branch: master
+  - provider: s3
+    access_key_id: AKIAJXFFXQ3YI7TH3FGQ
+    secret_access_key: 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
+    bucket: au.com.veromo.app.staging
+    region: ap-southeast-2
+    skip_cleanup: true
+    local_dir: dist
+    on:
+      branch: staging
+  - provider: s3
+    access_key_id: AKIAJXFFXQ3YI7TH3FGQ
+    secret_access_key: 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
+    bucket: au.com.veromo.app.demo
+    region: ap-southeast-2
+    skip_cleanup: true
+    local_dir: dist
+    on:
+      branch: demo
+notifications:
+  email: false
+  slack:
+    rooms:
+      - veromo:1hWc4yuFvnNNRES0pExPXEeG#engineering-bots
