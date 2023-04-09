@@ -1,0 +1,84 @@
+.invoice-li {
+    color: $colorPrussianBlue;
+    text-transform: uppercase;
+}
+
+
+    .invoice-li__title {
+        font-family: $fontBodySemibold;
+        font-size: 15px;
+
+        @include breakpoint(sm) {
+            font-size: 18px;
+        }
+
+        @include breakpoint(md) {
+            font-size: 20px;
+        }
+    }
+
+
+        .invoice-li__sub-title {
+            font-family: $fontBodyMedium;
+            font-size: 11px;
+
+            @include breakpoint(sm) {
+                font-size: 12px;
+            }
+
+            @include breakpoint(md) {
+                font-size: 14px;
+            }
+        }
+
+
+            .invoice-li__sub-title__label {
+                color: $colorAzure;
+                font-family: $fontBodySemibold;
+            }
+            .once-summary__product--level1 {
+                font-family: $fontBodyMedium;
+                color: $colorPrussianBlue;
+                font-size: 0.75rem;
+            }
+
+        .invoice-li__meta {
+            font-size: 12px;
+            font-family: $fontBodySemibold;
+
+            @include breakpoint(sm) {
+                font-size: 13px;
+            }
+
+            @include breakpoint(md) {
+                font-size: 15px;
+            }
+        }
+
+
+            .invoice-li__meta__attr {}
+
+
+                .invoice-li__meta__attr__icon {
+                    font-size: 20px;
+                    color: $colorAzure;
+                    cursor: pointer;
+
+                    @include breakpoint(md) {
+                        font-size: 24px;
+                    }
+                }
+
+
+            .invoice-li__meta__attr--download {
+
+                .invoice-li__meta__attr__icon {
+
+                    @include breakpoint(md) {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+
+

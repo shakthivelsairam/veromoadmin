@@ -1,0 +1,100 @@
+.view-user-li {
+    padding: 5px;
+
+    @include breakpoint(sm) {
+        padding: 0;
+    }
+
+
+    .user-li {
+        @include clearfix;
+        padding: 10px;
+
+        @include breakpoint(sm) {
+            display: flex;
+            align-items: center;
+
+            padding: 15px 20px;
+        }
+    }
+
+
+        .user-li__pic {
+            float: left;
+            width: 75px;
+            height: 75px;
+
+            @include breakpoint(sm) {
+                float: none;
+                flex-shrink: 0; // Don't let the pics squish
+            }
+        }
+
+
+        .user-li__descr,
+        .user-li__controls {
+            float: left;
+            width: calc(100% - 75px);
+
+            padding-left: 15px;
+
+            @include breakpoint(sm) {
+                float: none;
+
+                width: auto;
+                flex-grow: 1;
+            }
+        }
+
+
+        .user-li__descr {}
+
+
+            .user-li__descr__name {}
+
+
+            .user-li__descr__email {
+                margin-top: $spaceTiny;
+            }
+
+
+            .user-li__descr__email {}
+
+
+        .user-li__controls {
+            display: flex;
+            justify-content: flex-end;
+
+            margin-top: 6px;
+
+            @include breakpoint(sm) {
+                margin-top: 0;
+            }
+        }
+
+
+            .user-li__controls__action {
+                margin-left: $spaceSmall;
+
+                @include breakpoint(sm) {
+                    margin-left: $spaceMedium;
+                }
+            }
+
+
+    .user-li-title {
+        padding-left: 10px;
+
+        margin: 1.2em auto;
+
+        @include breakpoint(sm) {
+            padding-left: 20px;
+            margin: 1.4em auto;
+        }
+
+        @include breakpoint(md) {
+            margin: 1.6em auto;
+        }
+    }
+
+}

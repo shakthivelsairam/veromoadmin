@@ -1,0 +1,59 @@
+// SUB HEADER
+.view-sub-header-placeholder
+.view-sub-header
+    .sub-header
+        .sub-header__main
+            h1.sub-header__main__title Name Finder Searches
+            a.button.button--on-dark(href='#') Start a new search
+        .sub-header__sub
+            a.button.button--on-dark(href='#') Start a new search
+
+
+// NAME FINDER LISTINGS
+.view-name-finder-search-list(ng-init="temp = ['Bananaba', 'Appletreely', 'Punch Creative', 'Aloha Surfboards']")
+    .name-finder-search(ng-repeat='t in temp', va-gradient-background='.name-finder-search')
+        .name-finder-search__date-time
+            span.name-finder-search__date-time__label Date:
+            | 02/05/15 - 10:27 AM
+        .name-finder-search__title {{t}}
+        .name-finder-search__result-section.name-finder-search__result-section--biz-name
+            p.name-finder-search__result-section__title
+                | Business Name
+                span *
+            ul.name-finder-search__result-section__list
+                li.name-finder-search__result-section__list__item {{t}} PTY.LTD is available for registration
+        .name-finder-search__result-section
+            p.name-finder-search__result-section__title
+                | Domain Name(s)
+                span *
+            ul.name-finder-search__result-section__list
+                li.name-finder-search__result-section__list__item {{t}}.com.au
+                li.name-finder-search__result-section__list__item {{t}}.net.au
+        .name-finder-search__result-section.name-finder-search__result-section--social
+            p.name-finder-search__result-section__title
+                | Social Channels
+                span *
+            ul.name-finder-search__result-section__list
+                li.name-finder-search__result-section__list__item
+                    label LinkedIn
+                    | LinkedIn/bananab
+                li.name-finder-search__result-section__list__item
+                    label Twitter
+                    | @punch
+                li.name-finder-search__result-section__list__item
+                    label Google+
+                    | Google+/aloha
+                li.name-finder-search__result-section__list__item
+                    label Instagram
+                    | Instagram/bananaba
+        .name-finder-search__options
+            a.button(href='#') Delete
+            a.button.button--primary(ng-click="vm.refreshSearch('bananaba')") Refresh
+        p.name-finder-search__note
+            | All availabilities are as of the date and time searched. We can not guarantee they will be available.
+
+    // LIST ACTION
+    .list-action
+        a.list-action__link(href='#')
+            span.list-action__link__icon +
+            span.list-action__link__title Start new search

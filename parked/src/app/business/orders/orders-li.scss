@@ -1,0 +1,355 @@
+.view-orders-li {
+    background-color: $colorGainsboro;
+}
+
+    /* ---------------------------------------- /*
+        CURRENT ORDERS
+    /* ---------------------------------------- */
+    .orders-li-current {
+        color: $colorPrussianBlue;
+        background-color: $colorWhite;
+    }
+
+
+        .orders-li-open {}
+
+
+            .orders-li-open__header {
+            }
+
+
+                .orders-li__title {
+                    font-family: $fontBodySemibold;
+                    font-size: 16px;
+
+                    @include breakpoint(sm) {
+                        font-size: 20px;
+                    }
+
+                    @include breakpoint(md) {
+                        font-size: 22px;
+                    }
+
+                    @include breakpoint(lg) {
+                        font-size: 24px;
+                    }
+                }
+
+
+                .orders-li__title__order {
+                    color: $colorShakespeare;
+                    text-transform: uppercase;
+                }
+
+
+                    .orders-li__title__order:before {
+                        content: " ";
+                    }
+
+
+                .order-li__subhead {
+                }
+
+
+                    .orders-li__subhead__labels {
+                        color: $colorAzure;
+                        font-size: 10px;
+                        line-height: 16px;
+                        font-family: $fontBodySemibold;
+                        text-transform: uppercase;
+                        @include breakpoint(sm) {
+                            font-size: 14px;
+                            line-height: 24px;
+                        }
+                    }
+
+
+                    .orders-li__subhead__values {
+                        color: $colorPrussianBlue;
+                        font-size: 10px;
+                        line-height: 16px;
+                        font-family: $fontBodySemibold;
+                        @include breakpoint(sm) {
+                            font-size: 15px;
+                            line-height: 24px;
+                        }
+                    }
+
+
+                        .orders-li__subhead__date__value {
+                        }
+
+
+                        .orders-li__subhead__status__label {
+                        }
+
+                        .orders-li__subhead__status__value {
+                            font-size: 22px;
+                            text-transform: capitalize;
+                        }
+
+
+                    .orders-li__subhead__close {
+
+                    }
+
+
+                        .orders-li__meta__staticon--close {
+                            width: 26px;
+                            height: 26px;
+
+                            color: $colorCapeCod;
+                            text-align: center;
+                        }
+
+
+                            .orders-li__meta__staticon__icon.icon-down-close {
+                                &:before {
+                                    transform: translate(-50%, -50%) rotate(180deg);
+                                }
+                            }
+
+
+                    .orders-li__category__name {
+                        text-transform: uppercase;
+                        color: $colorSteelBlue;
+                        font-family: $fontBodySemibold;
+                        font-size: 12px;
+                        border-bottom: 1px solid $colorHaze;
+                        line-height: 28px;
+                    }
+
+
+                    .orders-li-open__item {
+                        border-bottom: 1px solid $colorHaze;
+                    }
+
+
+                    .orders-li-open__item--level1 {
+                        font-family: $fontBodyMedium;
+                        color: $colorPrussianBlue;
+                        font-size: 0.75rem;
+                    }
+
+
+                        .order-li__item__name {
+                            font-family: $fontBodyMedium;
+                            font-size: 14px;
+                            line-height: 28px;
+                        }
+
+
+                        .order-li__item__data{}
+
+
+                            .order-li__item__price {
+                                font-family: $fontBodyMedium;
+                                font-size: 14px;
+                                line-height: 28px;
+                            }
+
+
+                            .order-li__item__status {
+                                font-family: $fontBodyMedium;
+                                font-size: 14px;
+                                line-height: 28px;
+                                text-align: left;
+                            }
+
+                                .order-li__item__status.order-li-complete {
+                                    color: $colorShakespeare;
+                                }
+
+
+                            .orders-li__meta__staticon__icon.icon-close-round {
+                                color: $colorCapeCod;
+                            }
+
+
+            .orders-li-open__meta {}
+
+
+                .orders-li-open__meta__title {
+                    text-transform: uppercase;
+                    color: $colorSteelBlue;
+                    font-family: $fontBodySemibold;
+                    font-size: 12px;
+                    line-height: 28px;
+                }
+
+
+                .orders-li-open__meta__total {
+                    font-family: $fontBodySemibold;
+                    font-size: 14px;
+                    line-height: 28px;
+                }
+
+
+    /* ---------------------------------------- /*
+        PAST ORDERS
+    /* ---------------------------------------- */
+
+    .orders-li-group-title {
+        font-family: $fontBodySemibold;
+        color: $colorPrussianBlue;
+        font-size: 12px;
+        text-transform: uppercase;
+
+        @include breakpoint(sm) {
+            font-size: 13px;
+        }
+
+        @include breakpoint(md) {
+            font-size: 14px;
+        }
+
+        @include breakpoint(lg) {
+            font-size: 15px;
+        }
+    }
+
+
+    .orders-li-past {}
+
+
+        .orders-li-past:nth-child(2n+1) {
+            background-color: $colorHaze;
+        }
+
+
+        .orders-li-past:nth-child(2n) {
+            background-color: $colorSeashell;
+        }
+
+
+        .orders-li-closed {}
+
+
+            .orders-li-past__descr {}
+
+
+                .orders-li-past__descr__title {
+                    font-family: $fontBodySemibold;
+                    font-size: 15px;
+
+                    @include breakpoint(sm) {
+                        font-size: 16px;
+                    }
+
+                    @include breakpoint(md) {
+                        font-size: 18px;
+                    }
+
+                    @include breakpoint(lg) {
+                        font-size: 20px;
+                    }
+                }
+
+
+                .orders-li-past__descr__status {
+                    font-size: 10px;
+                    text-transform: uppercase;
+
+                    @include breakpoint(sm) {
+                        font-size: 12px;
+                    }
+
+                    @include breakpoint(md) {
+                        font-size: 13px;
+                    }
+
+                    @include breakpoint(lg) {
+                        font-size: 14px;
+                    }
+                }
+
+
+                    .orders-li-past__descr__status__label {
+                        color: $colorAzure;
+                        font-family: $fontBodySemibold;
+
+                        &:after {
+                            content: ' ';
+                        }
+                    }
+
+
+            .orders-li-past__meta {}
+
+
+                .orders-li__meta__staticon {
+                    // TODO: Create a reusable icon class
+                    width: 26px;
+                    height: 26px;
+
+                    color: $colorShakespeare;
+                    text-align: center;
+                }
+
+
+                .orders-li__meta__staticon--round {
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 50%;
+
+                    background-color: $colorShakespeare;
+                    color: $colorWhite;
+                    text-align: center;
+                }
+
+
+                .orders-li__meta__staticon--expand {
+                    width: 26px;
+                    height: 26px;
+
+                    color: $colorCapeCod;
+                    text-align: center;
+                }
+
+
+                    .orders-li__meta__staticon__icon {
+                        position: relative;
+                        display: inline-block;
+                        height: 100%;
+
+                        &:before {
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+
+
+                .orders-li__meta__attr {
+                    font-size: 12px;
+
+                    @include breakpoint(sm) {
+                        font-size: 13px;
+                    }
+
+                    @include breakpoint(md) {
+                        font-size: 14px;
+                    }
+
+                    @include breakpoint(lg) {
+                        font-size: 15px;
+                    }
+                }
+
+
+                    .orders-li__meta__attr--total {
+                        font-family: $fontBodySemibold;
+                    }
+
+
+                    .orders-li__meta__attr--date {
+
+                    }
+
+
+                    .orders-li__meta__attr__icon {
+                        color: $colorAzure;
+                        font-size: 20px;
+                    }

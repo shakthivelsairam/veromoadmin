@@ -1,0 +1,58 @@
+.view-main-content-w-side
+
+    .view-side-header
+        .side-header
+            .side-header__pic.profile-pic.profile-pic--large
+                | b
+            .side-header__title
+                .side-header__title__pre-title
+                    | Bananaba Pty Ltd
+                | Account settings
+            .side-header__icon
+                img.side-header__icon(src='/assets/images/icon-pencil-ruler.svg', alt='')
+
+
+    .view-business-settings
+        .setable
+
+            // INPUTS:
+            .setable__inputs
+                .input
+                    label.input__label Business nickname:
+                    .input__input
+                        span(ng-show="'business.settings' | isState")
+                            | {{vm.business.nickname}} Bananaba
+                        input(type='text', name='', ng-model='vm.business.nickname', ng-show='"business.settings.edit" | isState')
+
+                .input
+                    label.input__label Timezone:
+                    .input__input
+                        span(ng-show="'business.settings' | isState")
+                            | (UTC+10:00) Canberra, Melbourne, Sydney
+                        select(xng-model='', ng-show="'business.settings.edit' | isState")
+                            option(value='UTC+09:30') (UTC+09:30) Adelaide
+                            option(value='UTC+09:30') (UTC+09:30) Darwin
+                            option(value='UTC+10:00') (UTC+10:00) Brisbane
+                            option(value='UTC+10:00') (UTC+10:00) Canberra, Melbourne, Sydney
+
+                .input(ng-show="'business.settings' | isState")
+                    label.input__label Email:
+                    .input__input
+                        span
+                            | {{vm.business.email}} bananaba@appleap.com
+
+                .input
+                    label.input__label Details:
+                    .input__input
+                        span(ng-show="'business.settings' | isState")
+                            | {{vm.business.details}} Bananaba, Level 1, 91 Surry Hills NSW 2010
+                        input(type='text', name='', ng-model='vm.business.nickname', ng-show='"business.settings.edit" | isState')
+
+            // ACTIONS:
+            .setable__actions
+                a.setable__actions__button.button.button--wrapped(ui-sref='business.settings.edit', ng-show="'business.settings' | isState")
+                    | Edit
+                a.setable__actions__button.button.button--wrapped.button--primary(ng-click='vm.updateBusiness(vm.business)', ng-show='"business.settings.edit" | isState')
+                    | Save
+                a.setable__actions__button.button.button--wrapped(ng-click='vm.cancelUpdate()', ng-show='"business.settings.edit" | isState')
+                    | Cancel

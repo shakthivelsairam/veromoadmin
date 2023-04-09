@@ -1,0 +1,12 @@
+.view-business-details {
+    padding: $gruD;
+
+    @include breakpoint(sm) {
+        padding: 25px;
+        padding-top: 40px;
+    }
+
+    @include breakpoint(md) {
+        padding-top: 50px;
+    }
+}

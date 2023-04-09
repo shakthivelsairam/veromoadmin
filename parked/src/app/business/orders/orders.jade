@@ -1,0 +1,146 @@
+dashboard.view-main-content-w-side(ng-show="vm.showData()")
+
+    .view-side-header
+        .side-header
+            .side-header__pic.profile-pic.profile-pic--large
+                | {{vm.getFirstLetter(vm.currentAccount.name)}}
+            .side-header__title
+                .side-header__title__pre-title
+                    | {{vm.currentAccount.name}}
+                | Orders
+            .side-header__icon
+                img.side-header__icon(src='/assets/images/icon-clipboard.svg', alt='')
+
+
+    .view-orders-li
+
+        p.orders-li-group-title
+            | Current order(s)
+
+        .orders-li-current(ng-repeat="order in vm.orders")
+
+            .orders-li-open
+                .orders-li-open__header
+                    .orders-li__title
+                        | Order:
+                        span.orders-li__title__order
+                            | {{order.serial}}
+                    .orders-li__subhead
+                        .orders-li__subhead__labels
+                            .orders-li__subhead__date__label
+                                | Date Ordered:
+                            .orders-li__subhead__status__label
+                                | Order Status:
+                        .orders-li__subhead__values
+                            .orders-li__subhead__date__value
+                                | {{order.created}}
+                            .orders-li__subhead__status__value
+                                | {{order.status}}
+
+                .orders-li-open__items
+                    .orders-li__category(ng-repeat="category in order.items | groupByCategory")
+                        .orders-li__category__name
+                            | {{category}}:
+                        .orders-li-open__item(ng-repeat="item in order.items | filter: category")
+                            .order-li__item__name(ng-class="{'orders-li-open__item--level1': item.level == 1}")
+                                | {{item.copy}} {{item.description}} {{item.suffix}}
+                            .order-li__item__data
+                                .order-li__item__price
+                                    .order-li__item__price_amount(ng-show="!(item.price == 0)")
+                                        | {{item.price | currency}}
+                                .order-li__item__status(ng-show="item.lineType != 'package'")
+                                    | {{item.status}}
+                                .order-li__item__status(ng-show="item.lineType == 'package'")
+                                    | &nbsp;
+
+                .orders-li-open__meta
+                    .orders-li-open__meta__title
+                        | Total Order:
+                    .order-li__open__meta__data
+                        .orders-li-open__meta__total
+                            | {{order.total | currency}}
+                        .orders-li-open__meta__status
+                            | &nbsp;
+                        .orders-li-open__meta__staticon
+                            | &nbsp;
+
+va-onboarder(ng-show="vm.showOnboarder()", use-gallery="orders")
+
+//        p.orders-li-group-title
+//            | Past order(s)
+//
+//        .orders-li-past(ng-repeat="order in vm.orders | filter: {status: 'completed'}")
+//
+//            .orders-li-closed(ng-show="!order.show_detail")
+//                .orders-li-past__descr
+//                    .orders-li-past__descr__title
+//                        | {{order.id}}
+//                    .orders-li-past__descr__status
+//                        span.orders-li-past__descr__status__label
+//                            | Contents:
+//                        span.orders-li__category(ng-repeat="category in order.items | groupByCategory")
+//                            |  {{category.substring(0, 3)}}
+//                            span.orders-li__category__comma(ng-hide="$last")
+//                                | ,
+//                .orders-li-past__meta
+//                    .orders-li__meta__attr.orders-li__meta__attr--total
+//                        span.orders-li__meta__attr__icon.icon-banknote
+//                        | {{order.total | currency}}
+//                    .orders-li__meta__attr.orders-li__meta__attr--date
+//                        span.orders-li__meta__attr__icon.icon-calendar
+//                        | {{order.created}}
+//                    .orders-li__meta__staticon--round(ng-show='order.status=="completed"')
+//                        span.orders-li__meta__staticon__icon.icon-check
+//                    .orders-li__meta__staticon(ng-show='order.status!="completed"')
+//                        span.orders-li__meta__staticon__icon.icon-close-round
+//                    .orders-li__meta__staticon--expand(ng-click="vm.showOrderDetailToggle($index+1)")
+//                        span.orders-li__meta__staticon__icon.icon-down-open
+//
+//            .orders-li-open(ng-show="order.show_detail")
+//                .orders-li-open__header
+//                    .orders-li__title
+//                        | Order:
+//                        span.orders-li__title__order
+//                            | {{order.id }}
+//                    .orders-li__subhead
+//                        .orders-li__subhead__labels
+//                            .orders-li__subhead__date__label
+//                                | Date Ordered:
+//                            .orders-li__subhead__status__label
+//                                | Order Status:
+//                        .orders-li__subhead__values
+//                            .orders-li__subhead__date__value
+//                                | {{order.created}}
+//                            .orders-li__subhead__status__value
+//                                | {{order.percent_complete | number: 0 }}%
+//                        .orders-li__subhead__close
+//                            .orders-li__meta__staticon--close(ng-click="vm.showOrderDetailToggle($index+1)")
+//                                span.orders-li__meta__staticon__icon.icon-down-open.icon-down-close
+//
+//                .orders-li-open__items
+//                    .orders-li__category(ng-repeat="category in order.items | groupByCategory")
+//                        .orders-li__category__name
+//                            | {{category}}:
+//                        .orders-li-open__item(ng-repeat="item in order.items | filter: category")
+//                            .order-li__item__name
+//                                | {{item.item_name}}
+//                            .order-li__item__data
+//                                .order-li__item__price
+//                                    | {{item.item_price | currency}}
+//                                .order-li__item__status(ng-class="{'order-li-complete': item.item_status == 'Complete'}")
+//                                    | {{item.item_status}}
+//                                .orders-li__meta__staticon(ng-show='item.item_status=="Complete"')
+//                                    span.orders-li__meta__staticon__icon.icon-check
+//                                .orders-li__meta__staticon(ng-show='item.item_status!="Complete"')
+//                                    span.orders-li__meta__staticon__icon.icon-close-round
+//
+//                .orders-li-open__meta
+//                    .orders-li-open__meta__title
+//                        | Total Order:
+//                    .order-li__open__meta__data
+//                        .orders-li-open__meta__total
+//                            | {{order.total | currency}}
+//                        .orders-li-open__meta__status
+//                            | &nbsp;
+//                        .orders-li-open__meta__staticon
+//                            | &nbsp;

@@ -1,0 +1,393 @@
+.view-orders-li {
+    padding: 5px;
+
+    @include breakpoint(sm) {
+        padding: 0;
+    }
+
+
+    /* ---------------------------------------- /*
+        CURRENT ORDER
+    /* ---------------------------------------- */
+
+
+    .orders-li-current {
+        padding: 10px;
+
+        @include clearfix;
+        position: relative;
+    }
+
+
+        .orders-li-open {
+
+            @include breakpoint(sm) {
+                padding: 15px;
+
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
+            .orders-li-open__header {
+
+                @include breakpoint(sm) {
+                    width: 100%;
+                    margin-bottom: $gruC;
+
+                    display:flex;
+                    justify-content: flex-end;
+                }
+            }
+
+
+                .orders-li__title {
+                    flex: auto;
+                }
+
+
+                .orders-li__subhead {
+                    position: relative;
+
+                    @include breakpoint(sm) {
+                        display: flex;
+                    }
+                }
+
+
+                    .orders-li__subhead__labels {
+                        display: inline-block;
+
+                        @include breakpoint(sm) {
+                            min-width: 140px;
+
+                            padding: $gruA $gruC;
+
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                        }
+                    }
+
+
+                        .orders-li__subhead__date__label {
+                            display: inline-block;
+
+                            @include breakpoint(sm) {
+                                display: block;
+                            }
+                        }
+
+
+                        .orders-li__subhead__status__label {
+                            display: none;
+
+                            @include breakpoint(sm) {
+
+                                padding-top: $gruA;
+
+                                display: block;
+                            }
+    }
+
+
+                    .orders-li__subhead__values {
+                        display: inline-block;
+
+                        @include breakpoint(sm) {
+                            min-width: 140px;
+
+                            padding: $gruA $gruC;
+
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+
+
+                        .orders-li__subhead__date__value {
+                            display: inline-block;
+
+                            @include breakpoint(sm) {
+                                display: block;
+                            }
+                        }
+
+
+                        .orders-li__subhead__status__value {
+                            position: absolute;
+                            right: 0;
+                            bottom: -30px;
+
+                            @include breakpoint(sm) {
+                                position: relative;
+                                bottom: 0;
+                            }
+                        }
+
+                        .orders-li__subhead__close {
+                            position: absolute;
+                            right: 0;
+                            bottom: 0;
+
+                            @include breakpoint(sm) {
+                                position: relative;
+                            }
+                        }
+
+
+
+            .orders-li-open__items {}
+
+
+                    .orders-li__category__name {
+                        padding-top: $gruC;
+                    }
+
+                    .orders-li-open__item {
+                        display: flex;
+                        position: relative;
+                        justify-content: flex-end;
+
+                        @include breakpoint(sm) {
+                            justify-content: space-between;
+                        }
+                    }
+
+                    .orders-li-open__item--level1 {
+                        padding: 0 $gruB 0 25px;
+
+                        @include breakpoint(sm) {
+                            padding-left: 30px;
+                        }
+
+                        @include breakpoint(md) {
+                            padding-left: 50px;
+                        }
+                    }
+
+                        .order-li__item__name {
+                            flex: auto;
+                        }
+
+
+                        .order-li__item__data {
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+
+
+                            .order-li__item__price {
+
+                                @include breakpoint(sm) {
+                                    min-width: 120px;
+
+                                    flex: 2;
+                                }
+                            }
+
+
+                            .order-li__item__status {
+
+                                @include breakpoint(sm) {
+                                    min-width: 140px;
+
+                                    flex: 3;
+                                }
+                            }
+
+
+                            .order-li__item__meta__staticon {
+
+                                @include breakpoint(sm) {
+                                    flex: 1;
+                                }
+                            }
+
+
+            .orders-li-open__meta {
+                padding-top: $gruD;
+
+                display: flex;
+                position: relative;
+                justify-content: flex-end;
+
+                @include breakpoint(sm) {
+                    justify-content: space-between;
+                }
+            }
+
+
+                .orders-li-open__meta__title {
+                    flex: auto;
+                }
+
+
+                .order-li__open__meta__data {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+
+
+                    .orders-li-open__meta__total {
+
+                        @include breakpoint(sm) {
+                            margin-right: $gruE;
+                            width: 90px;
+
+                            flex: 2;
+                        }
+                    }
+
+
+                    .orders-li-open__meta__status {
+
+                        @include breakpoint(sm) {
+                            width: 140px;
+
+                            flex: 3;
+                        }
+                    }
+
+
+                    .orders-li-open__meta__staticon {
+                        width: 26px;
+
+                        @include breakpoint(sm) {
+                            flex: 1;
+                        }
+                    }
+
+
+    /* ---------------------------------------- /*
+        PAST ORDERS
+    /* ---------------------------------------- */
+
+
+    .orders-li-group-title {
+        padding-left: 10px;
+
+        @include breakpoint(sm) {
+            padding-left: 10px;
+        }
+
+        @include breakpoint(md) {
+            padding-left: 15px;
+        }
+    }
+
+
+    .orders-li-past {
+        padding: 10px;
+
+        @include clearfix;
+        position: relative;
+    }
+
+
+        .orders-li-closed {
+
+            @include breakpoint(sm) {
+                padding: 15px;
+
+                display: flex;
+                align-items: center;
+            }
+
+        }
+
+            .orders-li-past__descr {
+                max-width: 80%;
+
+                @include breakpoint(sm) {
+                    max-width: none;
+
+                    flex-grow: 1;
+                }
+            }
+
+
+                .orders-li-past__descr__title {
+                }
+
+
+                .orders-li-past__descr__status {
+                    margin-bottom: 10px;
+
+                    @include breakpoint(sm) {
+                        margin-bottom: 0;
+                    }
+                }
+
+
+            .orders-li-past__meta {
+                display: flex;
+                align-items: center;
+            }
+
+
+                .orders-li__meta__staticon {
+                    top: 10px;
+                    right: 10px;
+
+                    @include breakpoint(sm) {
+                        position: static;
+                    }
+                }
+
+
+                .orders-li__meta__staticon--round {
+                    position: absolute;
+
+                    top: 10px;
+                    right: 10px;
+
+                    @include breakpoint(sm) {
+                        position: static;
+                    }
+                }
+
+                .orders-li__meta__staticon--expand {
+                    position: absolute;
+
+                    top: 50px;
+                    right: 10px;
+
+                    @include breakpoint(sm) {
+                        position: static;
+                        top: 10px;
+                    }
+                }
+
+
+                .orders-li__meta__attr {
+                    margin-right: 15px;
+
+                    @include breakpoint(sm) {
+                        margin-right: 30px;
+
+                        text-align: center;
+                    }
+                }
+
+
+                    .orders-li__meta__attr__icon {
+                        margin-right: 5px;
+
+                        display: inline-block;
+
+
+                        @include breakpoint(sm) {
+                            margin-bottom: 5px;
+
+                            display: block;
+                        }
+
+                        &:before {
+                            vertical-align: middle;
+                        }
+                    }
+
+
+}

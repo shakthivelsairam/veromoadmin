@@ -1,0 +1,33 @@
+.view-main-content-w-side(ng-show="vm.showData()")
+
+    .view-side-header
+        .side-header
+            .side-header__pic.profile-pic.profile-pic--large
+                | b
+            .side-header__title
+                .side-header__title__pre-title
+                    | Bananaba Pty Ltd
+                | Invoices
+            .side-header__icon
+                img(src='/assets/images/icon-letter-envelope.svg', alt='')
+
+
+    .view-invoice-li
+        .invoice-li(ng-repeat='invoice in vm.invoices', va-gradient-background='.invoice-li')
+            .invoice-li__title
+                | {{::invoice.id}}
+            .invoice-li__sub-title
+                span.invoice-li__sub-title__label
+                    | Order:
+                | {{::invoice.order_id}}
+            .invoice-li__meta
+                .invoice-li__meta__attr
+                    span.invoice-li__meta__attr__icon.icon-banknote
+                    | {{::invoice.total | currency}}
+                .invoice-li__meta__attr
+                    span.invoice-li__meta__attr__icon.icon-calendar
+                    | {{::invoice.created}}
+                .invoice-li__meta__attr.invoice-li__meta__attr--download
+                    span.invoice-li__meta__attr__icon.icon-download(ng-click="vm.openInvoice(vm.id)")
+
+va-onboarder(ng-show="vm.showOnboarder()", use-gallery="invoices")

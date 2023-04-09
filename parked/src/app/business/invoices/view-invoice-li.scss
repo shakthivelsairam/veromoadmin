@@ -1,0 +1,121 @@
+.view-invoice-li {
+    padding: 5px;
+
+    @include breakpoint(sm) {
+        padding: 0;
+    }
+
+    @include breakpoint(lg) {
+        padding: 0;
+        float: right;
+    }
+
+
+    .invoice-li {
+        padding: 12px;
+
+        @include breakpoint(sm) {
+            @include clearfix;
+
+            position: relative;
+
+            padding: 20px;
+        }
+
+        @include breakpoint(md) {
+            padding: 25px;
+        }
+    }
+
+
+        .invoice-li__title {
+
+        }
+
+
+        .invoice-li__sub-title {
+            margin-bottom: 8px;
+
+            @include breakpoint(sm) {
+                margin-top: 2px;
+                margin-bottom: 0;
+            }
+        }
+
+
+        .invoice-li__title,
+        .invoice-li__sub-title {
+
+            @include breakpoint(sm) {
+                max-width: calc(90% - 260px);
+            }
+        }
+
+
+            .invoice-li__sub-title__label {
+                display: inline-block;
+                margin-right: 5px;
+            }
+
+
+        .invoice-li__meta {
+            display: flex;
+            align-items: center;
+
+            @include breakpoint(sm) {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+
+                width: 260px;
+            }
+
+            @include breakpoint(md) {
+                right: 0;
+            }
+        }
+
+
+            .invoice-li__meta__attr {
+                flex-grow: 1;
+
+                @include breakpoint(md) {
+                    text-align: center;
+                }
+            }
+
+
+                .invoice-li__meta__attr--download {
+                    text-align: right;
+
+                    @include breakpoint(md) {
+                        text-align: center;
+                    }
+
+                    .invoice-li__meta__attr__icon {
+
+                        @include breakpoint(md) {
+
+                        }
+                    }
+
+                }
+
+
+                .invoice-li__meta__attr__icon {
+                    display: inline-block;
+                    margin-right: 5px;
+
+                    @include breakpoint(md) {
+                        display: block;
+                        margin-bottom: 8px;
+                    }
+
+                    // Icon:
+                    &:before {
+                        vertical-align: middle;
+                    }
+                }
+
+
+}

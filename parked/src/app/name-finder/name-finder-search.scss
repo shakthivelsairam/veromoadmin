@@ -1,0 +1,139 @@
+.name-finder-search {}
+
+
+    .name-finder-search__date-time {
+        font-size: 11px;
+        font-family: $fontBodyMedium;
+        color: $colorBrandDarkBlue;
+
+        @include breakpoint(md) {
+            font-size: 14px;
+        }
+    }
+
+
+        .name-finder-search__date-time__label {
+            display: inline-block;
+
+            font-family: $fontBodySemibold;
+            text-transform: uppercase;
+            color: $colorBrandMediumBlue;
+            font-size: 11px;
+
+            margin-right: 5px;
+
+            @include breakpoint(md) {
+                font-size: 14px;
+                margin-right: 8px;
+            }
+        }
+
+
+    .name-finder-search__title {
+        font-family: $fontBodySemibold;
+        color: $colorBrandDarkBlue;
+
+        @include breakpoint(md) {
+            font-size: 23px;
+        }
+    }
+
+
+    .name-finder-search__result-section {
+        font-family: $fontBodySemibold;
+        font-size: 12px;
+        color: $colorBrandDarkBlue;
+
+        @include breakpoint(md) {
+            font-size: 15px;
+        }
+    }
+
+
+        .name-finder-search__result-section__title {
+            text-transform: uppercase;
+            color: $colorBrandMediumBlue;
+            font-size: 11px;
+
+            @include breakpoint(md) {
+                font-size: 14px;
+            }
+        }
+
+
+        .name-finder-search__result-section__list {
+            @include unlist;
+        }
+
+
+            .name-finder-search__result-section--biz-name {
+                .name-finder-search__result-section__list {}
+            }
+
+
+            .name-finder-search__result-section--domains {}
+
+
+            .name-finder-search__result-section--social {
+
+                .name-finder-search__result-section__list__item {
+                    background-color: transparent;
+                    padding: 0;
+
+                    label {
+                        display: inline-block;
+                        min-width: 80px;
+                        font-family: $fontBodyMedium;
+
+                        position: relative;
+                        margin-right: 10px;
+
+                        &:after {
+                            content: '-';
+                            position: absolute;
+                            left: 100%;
+                        }
+
+                        @include breakpoint(sm) {
+                            margin-right: 14px;
+                        }
+                    }
+                }
+            }
+
+
+            .name-finder-search__result-section__list__item {
+                padding: 10px;
+                background-color: $colorLightGrey;
+
+                @include breakpoint(sm) {
+                    padding: 11px;
+                }
+
+                @include breakpoint(md) {
+                    padding: 13px;
+                }
+
+                @include breakpoint(lg) {
+                    padding: 15px;
+                }
+
+                &:nth-child(1n+2) {
+                    margin-top: 1px;
+
+                    @include breakpoint(sm) {
+                        margin-top: 2px;
+                    }
+                }
+            }
+
+
+    .name-finder-search__note {
+        color: $colorBrandDarkBlue;
+        opacity: 0.5;
+        font-size: 11px;
+
+        @include breakpoint(md) {
+            font-size: 14px;
+        }
+    }

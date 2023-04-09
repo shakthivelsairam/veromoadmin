@@ -1,0 +1,75 @@
+.view-main-content-w-side
+
+    .view-side-header
+        .side-header
+            .side-header__pic.profile-pic.profile-pic--large
+                | b
+            .side-header__title
+                .side-header__title__pre-title
+                    | Bananaba Pty Ltd
+                | The Team
+            .side-header__icon
+                img.side-header__icon(src='/assets/images/icon-users-two.svg', alt='')
+
+
+    .view-user-li(ng-init='temp = [1,2,3]')
+        .user-li
+            .user-li__pic
+                .profile-pic
+                    img(src='/assets/images/icon-ninja-face.svg', alt='')
+            .user-li__descr
+                .user-li__descr__name
+                    a(ui-sref='user.profile')
+                        | Me
+                .user-li__descr__email
+                    | john.sample@gmail.com
+            .user-li__controls
+                select(va-custom-select).user-li__controls__options
+                    option(value='1')
+                        | Director/Admin
+                    option(value='2')
+                        | Admin
+                a.user-li__controls__action.button.button--wrapped
+                    | Leave
+
+        p.user-li-title
+            | Team Members
+
+        .user-li(ng-repeat='t in temp', va-gradient-background='.user-li')
+            .user-li__pic
+                .profile-pic
+                    img(src='/assets/images/icon-ninja-face.svg', alt='')
+            .user-li__descr
+                .user-li__descr__name
+                    a(ui-sref='user.profile.team({ id: t })')
+                        | Jackie Sample
+                .user-li__descr__email
+                    | jackie.sample@gmail.com
+            .user-li__controls
+                select(va-custom-select).user-li__controls__options
+                    option(value='1')
+                        | Director/Admin
+                    option(value='2')
+                        | Admin
+                a.user-li__controls__action.button.button--wrapped
+                    | Remove
+        .user-li
+            .user-li__pic
+                .profile-pic
+                    img(src='/assets/images/icon-ninja-face.svg', alt='')
+            .user-li__descr
+                .user-li__descr__email
+                    | Jackie Sample
+                .user-li__descr__meta
+                    | Invited 1 day ago
+            .user-li__controls
+                a.user-li__controls__action.button.button--wrapped
+                    | Re-send invite
+                a.user-li__controls__action.button.button--wrapped
+                    | Remove
+
+
+        .list-action
+            a.list-action__link(href='#')
+                span.list-action__link__icon +
+                span.list-action__link__title Invite new user

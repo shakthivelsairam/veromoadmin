@@ -1,0 +1,45 @@
+.view-main-content-w-side
+
+    .view-side-header
+        .side-header
+            .side-header__pic.profile-pic.profile-pic--large
+                | b
+            .side-header__title
+                .side-header__title__pre-title
+                    | {{::vm.business.business_name}}
+                | Business details
+            .side-header__icon
+                img.side-header__icon(src='/assets/images/icon-pencil-ruler.svg', alt='')
+
+
+    .view-business-details
+        .setable
+
+            // INPUTS:
+            .setable__inputs
+                .input
+                    label.input__label Australian Business Number (ABN):
+                    .input__input
+                        span {{::vm.business.business_abn}}
+                .input
+                    label.input__label Australian Company Number (ACN):
+                    .input__input
+                        span {{::vm.business.business_acn}}
+                .input
+                    label.input__label Tax File Number (TFN):
+                    .input__input
+                        span {{::vm.business.business_tfn}}
+                .input
+                    label.input__label Registered Business Address:
+                    .input__input
+                        span {{::vm.business.business_name}}<br>
+                        span {{::vm.business.business_registered_address_line1}}<br/>
+                        span(ng-if='vm.business.business_registered_address_line2 !==""')
+                            | {{::vm.business.business_registered_address_line2}}<br />
+                        span
+                            | {{::vm.business.business_registered_address_city}}, {{::vm.business.business_registered_address_state}} {{::vm.business.business_registered_address_pcode_text}}
+
+            // ACTIONS:
+            .setable__actions
+                a.setable__actions__button.button.button--wrapped(ng-click='vm.goToDocumentation()')
+                    | See Documentation

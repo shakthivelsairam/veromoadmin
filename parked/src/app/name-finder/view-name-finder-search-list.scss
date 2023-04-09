@@ -1,0 +1,123 @@
+.view-name-finder-search-list {
+    padding: 5px;
+
+    @include breakpoint(sm) {
+        padding: 0;;
+    }
+
+
+    .name-finder-search {
+        padding: 12px;
+
+        @include breakpoint(sm) {
+            position: relative;
+            padding: 20px;
+        }
+
+        @include breakpoint(md) {
+            padding: 30px;
+        }
+    }
+
+
+        .name-finder-search__title {
+            float: left;
+            margin-bottom: 12px;
+
+            @include breakpoint(sm) {
+                float: none;
+            }
+        }
+
+
+        .name-finder-search__date-time {
+            float: right;
+            margin-top: 4px;
+
+            @include breakpoint(sm) {
+                float: none;
+                margin-top: 0;
+                margin-bottom: 4px;
+            }
+        }
+
+
+            .name-finder-search__date-time__label {
+                display: none;
+
+                @include breakpoint(sm) {
+                    display: inline-block;
+                }
+            }
+
+
+        .name-finder-search__result-section {
+            @include clearfix;
+            clear: left;
+
+            margin-bottom: 15px;
+
+            @include breakpoint(sm) {
+                clear: none;
+                float: left;
+                width: 32.25%;
+
+                margin-right: 1.5%;
+                margin-top: 12px;
+                margin-bottom: 10px;
+
+                &.name-finder-search__result-section--social {
+                    margin-right: 0;
+                }
+            }
+        }
+
+
+            .name-finder-search__result-section__title {
+                margin-bottom: 6px;
+                margin-top: 0;
+            }
+
+
+        .name-finder-search__options {
+            margin-bottom: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @include breakpoint(sm) {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                margin: 0;
+            }
+
+            @include breakpoint(md) {
+                top: 30px;
+                right: 30px;
+            }
+
+            a {
+                @include breakpoint(sm) {
+                    margin-left: 15px;
+                }
+                @include breakpoint(md) {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+
+        .name-finder-search__note {
+            margin-bottom: 0;
+
+            @include breakpoint(sm) {
+                clear: left;
+            }
+        }
+
+    .list-action {}
+}
+
+
