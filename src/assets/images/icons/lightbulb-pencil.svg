@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 210 300" style="enable-background:new 0 0 210 300;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#010101;}
+	.st2{fill:none;stroke:#010101;stroke-width:5;stroke-miterlimit:10;}
+	.st3{fill:#BFE3DA;}
+	.st4{fill:#010101;stroke:#010101;stroke-miterlimit:10;}
+</style>
+<g>
+	<g>
+		<circle class="st0" cx="105" cy="104.9" r="72"/>
+		<rect x="81" y="258" class="st1" width="48" height="42"/>
+		<rect x="69" y="233" class="st0" width="72" height="62"/>
+		<line class="st2" x1="201" y1="105" x2="201" y2="9"/>
+		<line class="st2" x1="105" y1="9" x2="9" y2="9"/>
+		<line class="st2" x1="9" y1="105" x2="9" y2="201"/>
+		<g>
+			<g>
+				<line class="st2" x1="57" y1="281" x2="153" y2="281"/>
+			</g>
+			<g>
+				<line class="st2" x1="57" y1="265" x2="153" y2="265"/>
+			</g>
+			<g>
+				<line class="st2" x1="57" y1="249" x2="153" y2="249"/>
+			</g>
+			<g>
+				<line class="st2" x1="57" y1="233" x2="153" y2="233"/>
+			</g>
+		</g>
+		<g>
+			<polygon class="st3" points="97,97 113,97 105,81 			"/>
+			<path class="st2" d="M145,233c0-56,56-64,56-128c0-53-43-96-96-96C52,9,9,52,9,105c0,64,56,72,56,128"/>
+			<line class="st2" x1="113" y1="97" x2="97" y2="97"/>
+			<line class="st2" x1="85" y1="121" x2="125" y2="121"/>
+			<line class="st2" x1="98.3" y1="121" x2="98.3" y2="233"/>
+			<line class="st2" x1="111.7" y1="121" x2="111.7" y2="233"/>
+			<polyline class="st2" points="85,233 85,121 105,81 125,121 125,233 			"/>
+		</g>
+		<circle class="st3" cx="201" cy="105" r="8"/>
+		<circle class="st3" cx="9" cy="105" r="8"/>
+		<circle class="st3" cx="105" cy="9" r="8"/>
+		<circle class="st4" cx="9" cy="9" r="6"/>
+		<circle class="st4" cx="201" cy="9" r="6"/>
+		<circle class="st4" cx="9" cy="201" r="6"/>
+		<circle class="st0" cx="201" cy="105" r="9"/>
+		<circle class="st0" cx="9" cy="105" r="9"/>
+		<circle class="st0" cx="105" cy="9" r="9"/>
+	</g>
+</g>
+</svg>
