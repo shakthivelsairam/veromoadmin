@@ -1,0 +1,180 @@
+{
+    "id": 51,
+    "items": [{
+        "id": 101,
+        "product": "company",
+        "lineType": "package",
+        "parent": 0,
+        "level": 0,
+        "price": 799,
+        "description": "New Company Package: Bananaba",
+        "optional": false,
+        "replaceable": false,
+        "sequence":0
+    }, {
+        "id": 102,
+        "product": "business",
+        "lineType": "subitem",
+        "parent": 101,
+        "level": 1,
+        "price": 0,
+        "description": "Company Registration: Banaba PTY Ltd",
+        "optional": false,
+        "replaceable": false,
+        "sequence":2
+    },{
+        "id": 190,
+        "product": "abn",
+        "lineType": "subitem",
+        "parent": 101,
+        "level": 1,
+        "price": 0,
+        "description": "Australian Business Number (ABN)",
+        "optional": false,
+        "replaceable": false,
+        "sequence":3
+    },{
+        "id": 193,
+        "product": "tfn",
+        "lineType": "subitem",
+        "parent": 101,
+        "level": 1,
+        "price": 0,
+        "description": "Tax File Number (TFN) for Business",
+        "optional": false,
+        "replaceable": false,
+        "sequence":4
+    },{
+        "id": 192,
+        "product": "tax",
+        "lineType": "subitem",
+        "parent": 101,
+        "level": 1,
+        "price": 0,
+        "description": "Included Tax Registrations:",
+        "optional": false,
+        "replaceable": false,
+        "sequence":5
+    },{
+        "id": 195,
+        "product": "gst",
+        "lineType": "subitem",
+        "parent": 192,
+        "level": 2,
+        "price": 0,
+        "description": "GST",
+        "optional": false,
+        "replaceable": false,
+        "sequence":7
+    },{
+        "id": 194,
+        "product": "payg",
+        "lineType": "subitem",
+        "parent": 192,
+        "level": 2,
+        "price": 0,
+        "description": "PAYG Withholding",
+        "optional": false,
+        "replaceable": false,
+        "sequence":8
+    },{
+        "id": 196,
+        "product": "fbt",
+        "lineType": "subitem",
+        "parent": 192,
+        "level": 2,
+        "price": 0,
+        "description": "Fringe Benefits Tax",
+        "optional": false,
+        "replaceable": false,
+        "sequence":9
+    },{
+        "id": 198,
+        "product": "lct",
+        "lineType": "subitem",
+        "parent": 192,
+        "level": 2,
+        "price": 0,
+        "description": "Luxury Car Tax",
+        "optional": false,
+        "replaceable": false,
+        "sequence":11
+    },{
+        "id": 199,
+        "product": "wet",
+        "lineType": "subitem",
+        "parent": 192,
+        "level": 2,
+        "price": 0,
+        "description": "Wine Equalisation Tax",
+        "optional": false,
+        "replaceable": false,
+        "sequence":12
+    }, {
+        "id": 103,
+        "product": "domain",
+        "lineType": "subitem",
+        "parent": 101,
+        "level": 1,
+        "price": 0,
+        "description": "Included Domain Name: Banaba.com.au",
+        "optional": false,
+        "replaceable": true,
+        "sequence":13
+    },  {
+        "id": 106,
+        "product": "business",
+        "lineType": "product",
+        "parent": 0,
+        "level": 0,
+        "price": 59.99,
+        "description": "Business Name Registration: Bananabazaar",
+        "optional": true,
+        "replaceable": false,
+        "sequence":14
+    }, {
+        "id": 107,
+        "product": "business",
+        "lineType": "product",
+        "parent": 0,
+        "level": 0,
+        "price": 72.99,
+        "description": "Business Name Registration: Bananabizarre",
+        "optional": true,
+        "replaceable": false,
+        "sequence":15
+    }, {
+        "id": 104,
+        "product": "domain",
+        "lineType": "product",
+        "parent": 0,
+        "level": 0,
+        "price": 25,
+        "description": "Domain Name Registration: Bananaba.com",
+        "optional": true,
+        "replaceable": false,
+        "sequence":16
+    }, {
+        "id": 105,
+        "product": "domain",
+        "lineType": "product",
+        "parent": 0,
+        "level": 0,
+        "price": 19.99,
+        "description": "Domain Name Registration: Bananba.co",
+        "optional": true,
+        "replaceable": false,
+        "sequence":17
+    }, {
+         "id": 108,
+        "product": "folder",
+        "lineType": "product",
+        "parent": 0,
+        "level": 0,
+        "price": 49.99,
+        "description": "Company Folder",
+        "optional": true,
+        "replaceable": false,
+        "sequence":18
+    }]
+}

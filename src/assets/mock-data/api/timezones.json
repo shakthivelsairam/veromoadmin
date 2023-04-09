@@ -1,0 +1,18 @@
+[
+  {
+    "value": "UTC+09:30",
+    "desc": "(UTC+09:30) Adelaide"
+  },
+  {
+    "value": "UTC+09:30",
+    "desc": "(UTC+09:30) Darwin"
+  },
+  {
+    "value": "UTC+10:00",
+    "desc": "(UTC+10:00) Brisbane"
+  },
+  {
+    "value": "UTC+10:00",
+    "desc": "(UTC+10:00) Canberra, Melbourne, Sydney"
+  }
+]

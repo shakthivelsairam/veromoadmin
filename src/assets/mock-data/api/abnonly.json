@@ -1,0 +1,36 @@
+{
+    "businessDescription": null,
+    "businessActivityBicCode": null,
+    "businessActivityDescription": null,
+    "businessActivityBicDescription": null,
+    "businessActivityAnzsicCode": null,
+    "businessActivityAnzsicDescription": null,
+    "businessActivityRecentIndex": null,
+    "businessActivitySelectedIndex": null,
+    "officers": [
+      {
+        "tfn": null,
+        "title": null,
+        "firstName": null,
+        "middleName": null,
+        "lastName": null,
+        "gender": null,
+        "dobDD": null,
+        "dobMM": null,
+        "dobYYYY": null,
+        "birthCountry": null,
+        "birthState": null,
+        "birthCity": null,
+        "addressFloor": null,
+        "addressUnit": null,
+        "addressStreetNumber": null,
+        "addressStreetName": null,
+        "addressStreetType": null,
+        "addressCity": null,
+        "addressState": null,
+        "addressPcode": null,
+        "email": null,
+        "phoneMobile": null
+      }
+    ]
+}
